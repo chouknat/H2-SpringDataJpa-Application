@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 /**
  * Created by choukTutos on 18/12/2016.
  */
-public interface PersonRepository extends JpaRepository<Person, Integer> {
+public interface PersonRepository extends PagingAndSortingRepository<Person, Integer> {
 }
