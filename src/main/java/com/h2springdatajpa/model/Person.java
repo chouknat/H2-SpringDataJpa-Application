@@ -28,6 +28,7 @@ public class Person {
     @Column
     private int age;
 
+    //Test Ajout commetnaire pour gitLab
     public Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
