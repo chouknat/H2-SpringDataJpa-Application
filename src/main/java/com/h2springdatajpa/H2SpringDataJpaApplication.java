@@ -14,13 +14,15 @@ import java.util.stream.Stream;
 @Slf4j
 public class H2SpringDataJpaApplication {
 
-	public static void main(String[] args) {
-		ApplicationContext ctx = SpringApplication.run(H2SpringDataJpaApplication.class, args);
-		PersonRepository personRepository = ctx.getBean(PersonRepository.class);
-		Stream.of(new Person("Albert", "thomas", 30),
-				new Person("Ahmed", "malik", 24),
-				new Person("Brad", "pitt", 50))
-				.forEach(p -> personRepository.save(p));
-		personRepository.findAll().forEach(s -> log.info(s.toString()));
-	}
+    public static void main(String[] args) {
+        ApplicationContext ctx = SpringApplication.run(H2SpringDataJpaApplication.class, args);
+        PersonRepository personRepository = ctx.getBean(PersonRepository.class);
+        Stream.of(new Person("Albert", "thomas", 30),
+                new Person("Ahmed", "malik", 24),
+                new Person("Brad", "pitt", 50))
+                .forEach(p -> personRepository.save(p));
+        personRepository.findAll().forEach(s -> log.info(s.toString()));
+    }
+
+
 }
