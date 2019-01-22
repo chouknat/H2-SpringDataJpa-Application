@@ -15,6 +15,7 @@ import java.util.stream.Stream;
 public class H2SpringDataJpaApplication {
 
     public static void main(String[] args) {
+        //test
         ApplicationContext ctx = SpringApplication.run(H2SpringDataJpaApplication.class, args);
         PersonRepository personRepository = ctx.getBean(PersonRepository.class);
         Stream.of(new Person("Albert", "thomas", 30),
